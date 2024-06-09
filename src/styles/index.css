@@ -1,12 +1,35 @@
+body {
+  background-image: url(https://images5.alphacoders.com/132/1323468.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
 
-/* 
+h1 {
+  color: rgb(240, 180, 15);
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.form-control {
+  background-color: rgba(130, 175, 109, 0.897);
+  width: 70%;
+  display: flex;
+  margin: auto;
+}
 
-*/
+.form-control:focus {
+  background-color: rgb(144, 199, 144);
+  border-color: rgb(168, 224, 77);
+  box-shadow: 0 0 0 0.25rem rgba(228, 245, 130, 0.582);
+}
+
+.list-group-item {
+  background-color: rgba(118, 160, 112, 0.918);
+  width: 70%;
+  display: flex;
+  margin: auto;
+}
+
+p {
+  color: rgb(240, 180, 15);
+}
