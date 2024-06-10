@@ -123,7 +123,7 @@ function Home() {
         const result = await response.json();
 
         await consultToDos();
-        setTask(""); // Limpiar el campo de entrada después de añadir la tarea
+        setTask(""); // Limpio el input después de añadir la tarea
       } else {
         alert("La tarea deber tener entre 5 y 50 caracteres");
         setTask("");
@@ -187,10 +187,10 @@ function Home() {
 
   //-----------------------------DELETE ALL-------------------------------//
 
-  const deleteAllTasks = async () => {
+  const deleteAllTasks = async (name) => {
     try {
       const response = await fetch(
-        "https://playground.4geeks.com/todo/todos/VeroMT", // Endpoint para eliminar todas las tareas?
+        "https://playground.4geeks.com/todo/users/VeroMT", // Endpoint para eliminar todas las tareas?
         {
           method: "DELETE",
           headers: {
@@ -198,7 +198,7 @@ function Home() {
           },
         }
       );
-
+      createUser();
       if (response.ok) {
         console.log("All tasks deleted");
         await consultToDos(); // Actualiza la lista de tareas después de eliminar todas
@@ -372,14 +372,16 @@ function Home() {
           </li>
         ))}
       </ul>
-      <p>Pending tasks {pendingTasksCount}</p>
-      <p className="mb-0 sticky-bottom">
+      <p>
+        <strong>Pending tasks {pendingTasksCount}</strong>
+      </p>
+      <p className="mb-0">
         <a
           className="navbar-brand"
           target="_blank"
           href="https://github.com/VMTore"
         >
-          Made by ©VMTore <i class="fab fa-github"></i>
+          Made by ©VMTore <i className="fab fa-github"></i>
         </a>
       </p>
     </div>
