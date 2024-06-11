@@ -198,7 +198,7 @@ function Home() {
           },
         }
       );
-      createUser();
+      await createUser();
       if (response.ok) {
         console.log("All tasks deleted");
         await consultToDos(); // Actualiza la lista de tareas después de eliminar todas
